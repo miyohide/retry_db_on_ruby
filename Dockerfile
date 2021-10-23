@@ -10,5 +10,6 @@ WORKDIR /app
 COPY Gemfile .
 RUN bundle install
 COPY ./lib lib
+COPY Rakefile .
 
-CMD ["ruby", "lib/app.rb"]
+# CMD ["ruby", "lib/app.rb"]
