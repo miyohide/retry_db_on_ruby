@@ -11,4 +11,4 @@ COPY Gemfile .
 RUN bundle install
 COPY . .
 
-# CMD ["ruby", "lib/app.rb"]
+CMD ["ruby", "lib/app.rb"]
