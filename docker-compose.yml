@@ -2,12 +2,13 @@ version: "3.8"
 services:
   app:
     build: .
-    image: myrubyapp:1.0.0
     environment:
       APP_DB_USERNAME: "postgrestestuser"
       APP_DB_PASSWORD: "postgrestestpass"
       APP_DB_HOST: "db"
       APP_DB_PORT: 5432
+    depends_on:
+      - db
 
   db:
     image: postgres:13-alpine
