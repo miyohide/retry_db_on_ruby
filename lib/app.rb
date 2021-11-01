@@ -5,4 +5,4 @@ require 'yaml'
 require_relative './my_app/database'
 
 config = YAML.safe_load(ERB.new(IO.read(File.expand_path('../config/database.yml', BASE_DIR))).result)
-MyApp::Database.connect(config)
+MyApp::Database.new.connect(config)
