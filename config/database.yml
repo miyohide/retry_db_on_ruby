@@ -1,9 +1,0 @@
-production:
-  adapter: postgresql
-  encoding: unicode
-  username: <%= ENV['APP_DB_USERNAME'] %>
-  password: <%= ENV['APP_DB_PASSWORD'] %>
-  host: <%= ENV['APP_DB_HOST'] %>
-  port: <%= ENV['APP_DB_PORT'] %>
-  pool: 5
-  database: app_production
