@@ -9,7 +9,6 @@ services:
     environment:
       POSTGRES_PASSWORD: pgpass
       POSTGRES_USER: pguser
-      POSTGRES_DB: app_dev
 
   app:
     image: ruby:3.0.2
