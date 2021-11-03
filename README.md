@@ -6,7 +6,7 @@ Docker環境で動かそうとしています。
 # 課題
 
 - [ ] 環境がdevelopment固定
-- [ ] ユーザー名やパスワードが`database.yml`にそのまま入力しているのを環境変数にしたい
+- [x] ユーザー名やパスワードが`database.yml`にそのまま入力しているのを環境変数にしたい
 - [ ] Docker Composeを一度Downするとまたbundle installやり直し？
 
 # 参考
