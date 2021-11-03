@@ -18,6 +18,10 @@ services:
       - db
     volumes:
       - .:/app
+    environment:
+      DB_USER: pguser
+      DB_PASS: pgpass
+      DB_HOST: db
     working_dir: /app
 
 volumes:

@@ -3,6 +3,6 @@ development:
   encoding: unicode
   database: app_dev
   pool: 5
-  username: pguser
-  password: pgpass
-  host: db
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASS'] %>
+  host: <%= ENV['DB_HOST'] %>
