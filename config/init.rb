@@ -7,7 +7,8 @@ CONFIG_DIR = File.dirname(__FILE__)
 config = YAML::load(ERB::new(File.read(File.join(CONFIG_DIR, "database.yml"))).result)
 
 Time.zone = "Tokyo"
-ActiveRecord::Base.establish_connection(config["development"])
+app_env = ENV['APP_ENV'] || 'development'
+ActiveRecord::Base.establish_connection(config[app_env])
 ActiveRecord::Base.time_zone_aware_attributes = true
 
 PROJECT_ROOT_DIR = File.expand_path("..", CONFIG_DIR)
