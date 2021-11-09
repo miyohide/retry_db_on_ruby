@@ -7,7 +7,7 @@ Docker環境で動かそうとしています。
 
 - [ ] 環境がdevelopment固定
 - [x] ユーザー名やパスワードが`database.yml`にそのまま入力しているのを環境変数にしたい
-- [ ] Docker Composeを一度Downするとまたbundle installやり直し？
+- [x] Docker Composeを一度Downするとまたbundle installやり直し？
 
 # 参考
 

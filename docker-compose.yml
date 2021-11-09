@@ -18,6 +18,7 @@ services:
       - db
     volumes:
       - .:/app
+      - bundle:/usr/local/bundle
     environment:
       DB_USER: pguser
       DB_PASS: pgpass
@@ -26,3 +27,4 @@ services:
 
 volumes:
   db-data:
+  bundle:
