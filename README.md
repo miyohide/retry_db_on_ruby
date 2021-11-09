@@ -3,6 +3,16 @@
 Railsじゃないけれども単体でActiveRecordを使ってみるサンプルです。
 Docker環境で動かそうとしています。
 
+# 動かし方
+
+以下のコマンドを実行します。
+
+```shell
+$ docker-compose run --rm app bash
+$ bundle install  # 最初の1回だけ
+$ ruby scripts/aggregate_todo_count_by_date.rb
+```
+
 # 課題
 
 - [ ] 環境がdevelopment固定
