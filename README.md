@@ -13,9 +13,11 @@ $ bundle install  # 最初の1回だけ
 $ ruby scripts/aggregate_todo_count_by_date.rb
 ```
 
+環境は`APP_ENV`を設定すれば変更できます。`APP_ENV`を指定してなかった場合は`development`になります。
+
 # 課題
 
-- [ ] 環境がdevelopment固定
+- [x] 環境がdevelopment固定
 - [x] ユーザー名やパスワードが`database.yml`にそのまま入力しているのを環境変数にしたい
 - [x] Docker Composeを一度Downするとまたbundle installやり直し？
 
