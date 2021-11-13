@@ -8,7 +8,12 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 COPY Gemfile .
+COPY Gemfile.lock .
 RUN bundle install
+COPY scripts/entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
 COPY . .
+
+ENTRYPOINT [ "entrypoint.sh" ]
 
 CMD ["ruby", "scripts/aggregate_todo_count_by_date.rb"]
