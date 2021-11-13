@@ -2,6 +2,9 @@ require "active_record"
 require "active_support/time"
 require "erb"
 
+# 標準出力をバッファリングしない
+$stdout.sync = true
+
 CONFIG_DIR = File.dirname(__FILE__)
 
 config = YAML::load(ERB::new(File.read(File.join(CONFIG_DIR, "database.yml"))).result)
